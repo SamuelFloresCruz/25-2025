@@ -4,16 +4,16 @@
 import { useEffect, useState, useRef } from 'react';
 
 const reasons = [
-  { emoji: '😊', text: 'Tu sonrisa que ilumina todo a tu alrededor' },
-  { emoji: '💪', text: 'Tu fuerza y valentía ante los desafíos' },
-  { emoji: '🤗', text: 'Tu forma de abrazarme que me hace sentir en casa' },
-  { emoji: '😂', text: 'Tu risa contagiosa que alegra mis días' },
-  { emoji: '💭', text: 'Tu inteligencia y la forma en que ves el mundo' },
-  { emoji: '💝', text: 'Tu corazón bondadoso y lleno de amor' },
-  { emoji: '✨', text: 'Tu belleza interior y exterior' },
-  { emoji: '🌟', text: 'Tu capacidad de hacerme mejor persona' },
-  { emoji: '🎯', text: 'Tu determinación y tus sueños' },
-  { emoji: '🦋', text: 'Simplemente por ser tú, mi Amalia' },
+  'Tu sonrisa que ilumina todo a tu alrededor',
+  'Tu fuerza y valentía ante los desafíos',
+  'Tu forma de abrazarme que me hace sentir en casa',
+  'Tu risa contagiosa que alegra mis días',
+  'Tu inteligencia y la forma en que ves el mundo',
+  'Tu corazón bondadoso y lleno de amor',
+  'Tu belleza interior y exterior',
+  'Tu capacidad de hacerme mejor persona',
+  'Tu determinación y tus sueños',
+  'Simplemente por ser tú, mi Amalia',
 ];
 
 export default function ReasonsLove() {
@@ -86,29 +86,20 @@ export default function ReasonsLove() {
                   : 'opacity-0 translate-y-10 scale-90'
               }`}
             >
-              <div className="glass rounded-2xl p-5 sm:p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20 cursor-default">
+              <div className="glass rounded-xl p-3 sm:p-4 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20 cursor-default flex items-center gap-4">
                 {/* Número de razón */}
-                <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg">
+                <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 mr-1 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg">
                   {index + 1}
-                </div>
-                
-                {/* Emoji */}
-                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-center group-hover:scale-125 transition-transform duration-300">
-                  {reason.emoji}
                 </div>
                 
                 {/* Texto */}
                 <p 
-                  className="text-white/90 text-center text-sm md:text-base leading-relaxed"
+                  className="text-white/90 text-sm md:text-base leading-relaxed"
                   style={{ fontFamily: 'var(--font-playfair), serif' }}
                 >
-                  {reason.text}
+                  {reason}
                 </p>
                 
-                {/* Corazón decorativo en hover */}
-                <div className="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 text-xl sm:text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  💕
-                </div>
               </div>
             </div>
           ))}
