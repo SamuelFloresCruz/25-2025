@@ -47,7 +47,7 @@ export default function ReasonsLove() {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-20 md:py-32 px-4 section-gradient-2 w-full flex justify-center"
+      className="relative py-20 md:py-32 px-6 sm:px-4 section-gradient-2 w-full flex justify-center overflow-hidden"
     >
       <div className="max-w-6xl w-full mx-auto">
         {/* Título de la sección */}
@@ -76,7 +76,7 @@ export default function ReasonsLove() {
         </div>
 
         {/* Grid de razones */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-4 md:gap-6">
           {reasons.map((reason, index) => (
             <div
               key={index}
@@ -86,14 +86,14 @@ export default function ReasonsLove() {
                   : 'opacity-0 translate-y-10 scale-90'
               }`}
             >
-              <div className="glass rounded-2xl p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20 cursor-default">
+              <div className="glass rounded-2xl p-5 sm:p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20 cursor-default">
                 {/* Número de razón */}
-                <div className="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg">
                   {index + 1}
                 </div>
                 
                 {/* Emoji */}
-                <div className="text-4xl md:text-5xl mb-4 text-center group-hover:scale-125 transition-transform duration-300">
+                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-center group-hover:scale-125 transition-transform duration-300">
                   {reason.emoji}
                 </div>
                 
@@ -106,7 +106,7 @@ export default function ReasonsLove() {
                 </p>
                 
                 {/* Corazón decorativo en hover */}
-                <div className="absolute -bottom-2 -right-2 text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 text-xl sm:text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   💕
                 </div>
               </div>
